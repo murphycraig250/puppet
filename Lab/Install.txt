@@ -1,0 +1,13 @@
+#generate new key
+
+ssh-keygen -t ed25519 -C "murphycraig250@gmail.com"
+
+#copy key to clipboard (upload to github)
+
+clip < ~/.ssh/id_ed25519.pub
+
+#convert private key with puttygen
+
+#update apt-get
+sudo apt-get update
+

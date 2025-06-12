@@ -1,0 +1,7 @@
+roles::default_role: 'role::windows_base'
+profile::choco_windows::apps:
+  - 'vlc'
+  - 'googlechrome'
+  - 'firefox'
+  - '7zip.install'
+  - 'notepadplusplus.install'
