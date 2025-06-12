@@ -1,0 +1,6 @@
+modules/chocolatey/
+modules/powershell/
+modules/pwshlib/
+modules/registry/
+modules/ruby_task_helper/
+modules/stdlib/
