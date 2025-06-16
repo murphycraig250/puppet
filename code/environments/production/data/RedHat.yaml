@@ -1,0 +1,1 @@
+roles::default_role: 'role::linux_base'

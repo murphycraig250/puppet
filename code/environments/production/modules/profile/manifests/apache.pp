@@ -1,5 +1,31 @@
 class profile::apache {
- package {'apache2':
- ensure => 'installed',
- }
+
+$package_name = $facts['os']['family'] ? {
+  'Debian' => 'apache2',
+  'RedHat' => 'httpd',}
+
+$message = lookup('apache::index_message', {default_value => "Hello from ${facts['networking']['hostname']}!"})
+
+
+
+package {$package_name:
+  ensure => 'installed',
+  }
+
+service {$package_name:
+  ensure => running,
+  enable => true,
+  require => Package[$package_name],
+  }
+
+file {'/var/www/html/index.html':
+  ensure => file,
+  content => "<html><body><h1>$message</h1></body></html/>\n",
+  notify => Service[$package_name],
+  }
+
+
+
+
 }
+

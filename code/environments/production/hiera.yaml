@@ -5,7 +5,7 @@ defaults:
   data_hash: yaml_data
 
 hierarchy:
-  - name: "OS Specific"
-    path: "%{facts.os.family}.yaml"
-  - name: "Common"
-    path: "common.yaml"
+ - name: "Per node data" 
+   path: "nodes/%{networking.hostname}.yaml"
+ - name: "OS Specific"
+   path: "%{facts.os.family}.yaml"
