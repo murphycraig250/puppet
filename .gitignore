@@ -4,3 +4,4 @@ code/environments/production/modules/pwshlib/
 code/environments/production/modules/registry/
 code/environments/production/modules/ruby_task_helper/
 code/environments/production/modules/stdlib/
+code/environments/production/modules/
