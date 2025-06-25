@@ -1,14 +1,22 @@
-class profile::choco_windows (
-  Array[String] $apps = [],
-) {
+# @summary A short summary of the purpose of this class
+#
+# A description of what this class does
+#
+# @example
+#   include profile::choco_windows
+class profile::choco_windows {
+$apps = lookup({
+  name          => 'packages.chocolatey.include',
+  value_type    => Hash,
+  default_value => {},
+})
 
-  include chocolatey
+create_resources(
+  'profile::choco_install',
+  $apps,)
 
-  $apps.each |String $app| {
-    package { $app:
-      ensure   => 'latest',
-      provider => 'chocolatey',
-      require  => Class['chocolatey'],
-    }
-  }
+
+#notify {'apps':
+#  message => "${apps}",
+#}
 }

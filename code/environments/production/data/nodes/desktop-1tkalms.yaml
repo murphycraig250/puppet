@@ -1,0 +1,3 @@
+roles::default_role: 'role::windows_base'
+#profile::choco_windows::exclude_apps:
+#  - 'googlechrome'

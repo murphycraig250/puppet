@@ -1,0 +1,34 @@
+FORGE
+  remote: https://forgeapi.puppet.com
+  specs:
+    puppetlabs-chocolatey (8.0.2)
+      puppetlabs-powershell (>= 1.0.1, < 7.0.0)
+      puppetlabs-registry (>= 1.0.0, < 6.0.0)
+      puppetlabs-ruby_task_helper (>= 0.4.0, < 1.0.0)
+      puppetlabs-stdlib (>= 4.6.0, < 10.0.0)
+    puppetlabs-powershell (6.0.2)
+      puppetlabs-pwshlib (>= 0.4.0, < 2.0.0)
+    puppetlabs-pwshlib (1.2.3)
+    puppetlabs-registry (5.0.3)
+    puppetlabs-ruby_task_helper (0.6.1)
+    puppetlabs-stdlib (9.7.0)
+
+GIT
+  remote: https://github.com/murphycraig250/craig-profile.git
+  ref: master
+  sha: 674895bbdc626b03392ee997e5b4e2bcaa664a95
+  specs:
+    craig-profile (0.1.0)
+
+GIT
+  remote: https://github.com/murphycraig250/craig-role.git
+  ref: master
+  sha: 3f4518b1fbd76f929904c2269eeb18376b96ded5
+  specs:
+    craig-role (0.1.0)
+
+DEPENDENCIES
+  craig-profile (>= 0)
+  craig-role (>= 0)
+  puppetlabs-chocolatey (= 8.0.2)
+
